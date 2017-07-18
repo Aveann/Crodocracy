@@ -30,7 +30,7 @@ class HomeScreen extends Component {
   };
  render() {
    return (
-     <Text>Home Screen</Text>
+     <Text>Home Screen ta vukk</Text>
    );
  }
 }
