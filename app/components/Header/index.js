@@ -8,7 +8,7 @@ import React, { Component } from 'react';
 import { View, StyleSheet, TextInput, TouchableOpacity, Image, Text, Button } from 'react-native';
 
 import { StackNavigator } from 'react-navigation';
-import images from '../../config/Images';
+import images from '../../config/images';
 
 class Header extends Component {
   constructor(props) {

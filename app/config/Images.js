@@ -4,7 +4,8 @@ Created by Naëva Arnould
 Defines the path of different images.
 */
 const IMAGE_PATH = '../images/';
-const Images = {
+
+const images = {
   logo: require('../images/crowlogo.png'),
 
   //TABS
@@ -14,10 +15,13 @@ const Images = {
     deadline_voting: require('../images/deadline-voting-icon.png'),
     profile: require('../images/profile.png'),
   },
+
+  //HEADER
   header: {
     search: require('../images/search.png'),
     create: require('../images/create-new-pencil-button.png')
   },
+
   //PROFILE
   profile: {
     default_male: require('../images/default_profile_male.png'),
@@ -27,4 +31,4 @@ const Images = {
 
 };
 
-export default Images;
+export default images;
