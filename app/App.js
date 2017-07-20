@@ -2,6 +2,8 @@
   Author: Naëva Arnould
   Contributors:
   Description: Configures the scenes, initial scene, the store and other things...
+
+  ohlala
 */
 
 'use strict';
@@ -13,45 +15,33 @@ import { TabNavigator, StackNavigator } from 'react-navigation';
 import {View, Text, StyleSheet, Image, Button} from 'react-native';
 
 //TODO : names of those files should be changed
-import Images from './config/images';
-import Styles from './config/styles';
+import Images from './config/Images';
+import Styles from './config/Styles';
 
-//COMPONENTS
 import Header from './components/Header';
 
-//SCREENS
-import HomeScreen from './screens/HomeScreen';
-
-
-class Filter1 extends Component {
-  render(){
-    return(
-      <Text>Filter1</Text>
-    );
-  }
+class HomeScreen extends Component {
+  static navigationOptions = {
+    header: <Header/>,
+    tabBarIcon: ({ tintColor }) => (
+      <Image
+        source={Images.tab.home}
+        style={[styles.icon, {tintColor: tintColor}]}
+      />
+    ),
+  };
+ render() {
+   return (
+     <Text>Home Screen</Text>
+   );
+ }
 }
-
-class Filter2 extends Component {
-  render(){
-    return(
-      <Text>Filter2</Text>
-    );
-  }
-}
-
-const FilterTabNav = TabNavigator({
-  Filter1: {screen: Filter1},
-  Filter2: {screen: Filter2},
-}, {
-  initialRouteName: 'Filter1',
-  tabBarPosition: 'top',
-  swipeEnabled: true,
-});
 
 
 class ParticipateScreen extends Component {
   static navigationOptions = {
-    header: <Header />,
+    headerLeft: <Button title="Search" />,
+    headerRight: <Button title="Popose" />,
     tabBarIcon: ({ tintColor }) => (
       <Image
         source={Images.tab.deadline_voting}
@@ -85,7 +75,8 @@ class NotificationScreen extends Component {
 
 class ProfileScreen extends Component {
   static navigationOptions = {
-    header: <Header />,
+    headerLeft: <Button title="Search" />,
+    headerRight: <Button title="Popose" />,
     tabBarIcon: ({ tintColor }) => (
       <Image
         source={Images.tab.profile}
@@ -95,17 +86,8 @@ class ProfileScreen extends Component {
   };
   render() {
     return (
-      <View>
-        {/*Profile pic, name and Description*/}
-        <View style={styles.profileInfoContainer}>
-        </View>
-        {/*Last Consulted proposals*/}
-        <View style={styles.historic}>
-        </View>
-        {/*Own comments, answers, liked topics*/}
-        <View style={styles.activity}>
-        </View>
-      </View>
+      <Text>Here we will see our profile (the user s profile) and we will be able
+      to modify it.</Text>
     );
 
   }
@@ -113,8 +95,8 @@ class ProfileScreen extends Component {
 
 const styles = StyleSheet.create({
   icon: {
-    width: 26,
-    height: 26,
+    width: 24,
+    height: 24,
   },
 });
 
