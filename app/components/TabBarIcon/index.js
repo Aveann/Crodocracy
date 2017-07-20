@@ -5,48 +5,27 @@
 */
 'use strict';
 import React, { Component } from 'react';
-import { View, StyleSheet, Text, Button } from 'react-native';
+import { StyleSheet, Image} from 'react-native';
 
+/**
+  Returns an icon for the tab bar.
+  @params icon <idontknowthetype> the image to display.
 
-import images from '../../config/Images';
-
-class Header extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      searchedText: '',
-     };
-  };
-  render() {
-    return (
-      <View style={styles.headerContainer}>
-        <Button title="Search" style={styles.headerRight} />
-        <Text style={styles.title}>CrodoCracy</Text>
-        <Button title="Create" style={styles.headerLeft} />
-      </View>
-    );
-  }
+  Can use images from app/config/images.js
+*/
+function TabBarIcon(props){
+  const icon = props.icon;
+  return (
+    <Image source={icon} style={styles.icon} />
+  )
 }
 
 const styles = StyleSheet.create({
-  headerContainer: {
-    flexDirection: 'row',
-    backgroundColor: 'white',
-    alignItems: 'flex-end',
-    justifyContent: 'space-between',
-    height: 65,
+  icon: {
+    width: 24,
+    height: 24
   },
-  title: {
-    fontSize: 20,
-    alignSelf: 'center',
-  },
-  headerRight: {
-    marginTop: 30,
-    position: 'absolute',
-  },
-  headerLeft: {
-
-  }
 });
 
-module.exports = Header;
+
+module.exports = TabBarIcon;

@@ -15,27 +15,13 @@ import { TabNavigator, StackNavigator } from 'react-navigation';
 import {View, Text, StyleSheet, Image, Button} from 'react-native';
 
 //TODO : names of those files should be changed
-import Images from './config/Images';
-import Styles from './config/Styles';
+import Images from './config/images';
+import Styles from './config/styles';
 
 import Header from './components/Header';
 
-class HomeScreen extends Component {
-  static navigationOptions = {
-    header: <Header/>,
-    tabBarIcon: ({ tintColor }) => (
-      <Image
-        source={Images.tab.home}
-        style={[styles.icon, {tintColor: tintColor}]}
-      />
-    ),
-  };
- render() {
-   return (
-     <Text>Home Screen</Text>
-   );
- }
-}
+import HomeScreen from './screens/HomeScreen';
+import ProfileScreen from './screens/ProfileScreen';
 
 
 class ParticipateScreen extends Component {
@@ -73,25 +59,7 @@ class NotificationScreen extends Component {
   }
 }
 
-class ProfileScreen extends Component {
-  static navigationOptions = {
-    headerLeft: <Button title="Search" />,
-    headerRight: <Button title="Popose" />,
-    tabBarIcon: ({ tintColor }) => (
-      <Image
-        source={Images.tab.profile}
-        style={[styles.icon, {tintColor: tintColor}]}
-      />
-    ),
-  };
-  render() {
-    return (
-      <Text>Here we will see our profile (the user s profile) and we will be able
-      to modify it.</Text>
-    );
 
-  }
-}
 
 const styles = StyleSheet.create({
   icon: {

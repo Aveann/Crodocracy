@@ -9,19 +9,16 @@ import {
 
 import { StackNavigator, TabNavigator } from 'react-navigation';
 
-import images from '../../config/images';
+import IMAGES from '../../config/images';
 
 import Header from '../../components/Header';
-
+import TabBarIcon from '../../components/TabBarIcon';
 
 export default class HomeScreen extends Component {
   static navigationOptions = {
     header: <Header/>,
     tabBarIcon: ({ tintColor }) => (
-      <Image
-        source={images.tab.home}
-        style={[styles.icon, {tintColor: tintColor}]}
-      />
+      <TabBarIcon icon={IMAGES.tab.home} tintColor={tintColor}/>
     ),
   };
  render() {
@@ -30,11 +27,3 @@ export default class HomeScreen extends Component {
    );
  }
 }
-
-
-const styles = StyleSheet.create({
-  icon: {
-    width: 24,
-    height: 24
-  }
-});
