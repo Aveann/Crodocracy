@@ -5,14 +5,14 @@ Defines the path of different images.
 */
 const IMAGE_PATH = '../images/';
 
-const images = {
+const IMAGES = {
   logo: require('../images/crowlogo.png'),
 
   //TABS
   tab: {
     home: require('../images/home-icon.png'),
     notification: require('../images/notification-icon-updated.png'),
-    deadline_voting: require('../images/deadline-voting-icon.png'),
+    participate: require('../images/deadline-voting-icon.png'),
     profile: require('../images/profile.png'),
   },
 
@@ -28,7 +28,6 @@ const images = {
     default_female: require('../images/default_profile_female.png'),
   },
 
-
 };
 
-export default images;
+export default IMAGES;

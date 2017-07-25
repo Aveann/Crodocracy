@@ -9,14 +9,14 @@ import {
 
 import { StackNavigator, TabNavigator } from 'react-navigation';
 
-import IMAGES from '../../config/images';
+import IMAGES from '../../config/IMAGES';
 
-import Header from '../../components/Header';
-import TabBarIcon from '../../components/TabBarIcon';
+import HeaderGeneral from '../../config/COMPONENTS';
+import TabBarIcon from '../../config/COMPONENTS';
 
 export default class HomeScreen extends Component {
   static navigationOptions = {
-    header: <Header/>,
+    header: <HeaderGeneral />,
     tabBarIcon: ({ tintColor }) => (
       <TabBarIcon icon={IMAGES.tab.home} tintColor={tintColor}/>
     ),

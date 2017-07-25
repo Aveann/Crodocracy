@@ -1,7 +1,6 @@
-import React from 'react';
 import { StyleSheet } from 'react-native';
 
-const STYLES = StyleSheet.create({
+const styles = StyleSheet.create({
   headerContainer: {
     flexDirection: 'row',
     backgroundColor: 'white',
@@ -22,4 +21,4 @@ const STYLES = StyleSheet.create({
   }
 });
 
-export default STYLES;
+module.exports = styles;
