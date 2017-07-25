@@ -11,7 +11,7 @@ import { StackNavigator, TabNavigator } from 'react-navigation';
 
 import IMAGES from '../../config/IMAGES';
 
-import HeaderGeneral from '../../config/COMPONENTS';
+import { HeaderGeneral } from '../../config/COMPONENTS';
 import TabBarIcon from '../../config/COMPONENTS';
 
 export default class HomeScreen extends Component {

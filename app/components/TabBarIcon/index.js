@@ -11,12 +11,9 @@ import styles from './styles';
 
   Can use images from app/config/images.js
 */
-function TabBarIcon(props){
+export default function TabBarIcon(props){
   const icon = props.icon;
   return (
     <Image source={icon} style={styles.icon} />
   )
 }
-
-
-module.exports = TabBarIcon;

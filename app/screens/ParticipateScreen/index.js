@@ -9,7 +9,7 @@ import { StackNavigator, TabBarNavigator } from 'react-navigation';
 
 import IMAGES from '../../config/IMAGES';
 
-import { HeaderGeneral } from '../../GLOBALS';
+import { HeaderGeneral } from '../../config/COMPONENTS';
 
 class ParticipateScreen extends Component {
   static navigationOptions = {
