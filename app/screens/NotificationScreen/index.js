@@ -9,8 +9,10 @@ import { StackNavigator, TabBarNavigator } from 'react-navigation';
 
 import IMAGES from '../../config/IMAGES';
 
-import HeaderNotifications from '../../config/COMPONENTS';
-import TabBarIcon from '../../config/COMPONENTS';
+import { HeaderNotifications } from '../../config/COMPONENTS';
+
+import TabBarIcon from '../../components/TabBarIcon';
+
 
 class NotificationScreen extends Component {
   static navigationOptions = {

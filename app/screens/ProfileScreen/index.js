@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 
 import { Image, Text } from 'react-native';
 
-import HeaderGeneral from '../../config/COMPONENTS';
-import TabBarIcon from '../../config/COMPONENTS';
+import { HeaderGeneral } from '../../config/COMPONENTS';
+
+import TabBarIcon from '../../components/TabBarIcon';
 
 import IMAGES from '../../config/IMAGES';
 

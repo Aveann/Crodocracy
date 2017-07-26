@@ -11,6 +11,9 @@ import IMAGES from '../../config/IMAGES';
 
 import { HeaderGeneral } from '../../config/COMPONENTS';
 
+import TabBarIcon from '../../components/TabBarIcon';
+
+
 class ParticipateScreen extends Component {
   static navigationOptions = {
     header: <HeaderGeneral />,
